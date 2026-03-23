@@ -71,12 +71,11 @@
 #define SEV_CRITICAL 4
 
 /* Banner - minimal and professional */
-static const char *BANNER = 
+static const char *BANNER =
 C_CYAN "  ╭──────────────────────────────────────────╮\n"
-"  │" C_WHITE "  Rupurt " C_DIM "v2.5" C_CYAN "  │  " C_GRAY "Advanced Rootkit Hunter" C_CYAN "  │\n"
-"  │" C_DIM "     github.com/bad-antics/nullsec-rupurt" C_CYAN " │\n"
+"  │ " C_WHITE "Rupurt v2.5" C_CYAN " │ " C_GRAY "Advanced Rootkit Hunter    " C_CYAN "│\n"
+"  │ " C_DIM "github.com/bad-antics/rupurt             " C_CYAN "│\n"
 "  ╰──────────────────────────────────────────╯" C_RESET "\n";
-
 /*
  * ═══════════════════════════════════════════════════════════════════════════
  * COMPREHENSIVE ROOTKIT DATABASE v2.5
@@ -1725,26 +1724,26 @@ static void print_summary(void) {
     
     time_t elapsed = time(NULL) - stats.start_time;
     
-    printf("\n");
-    printf("  " C_CYAN "╭────────────────────────────────────────╮" C_RESET "\n");
-    printf("  " C_CYAN "│" C_WHITE C_BOLD "           SCAN RESULTS                " C_CYAN "│" C_RESET "\n");
-    printf("  " C_CYAN "├────────────────────────────────────────┤" C_RESET "\n");
-    printf("  " C_CYAN "│" C_RESET "  Scan Duration:     %3ld seconds        " C_CYAN "│" C_RESET "\n", elapsed);
-    printf("  " C_CYAN "│" C_RESET "  Checks Performed:  %3d                " C_CYAN "│" C_RESET "\n", stats.total_checks);
-    printf("  " C_CYAN "├────────────────────────────────────────┤" C_RESET "\n");
-    printf("  " C_CYAN "│" C_RESET "  " C_RED C_BOLD "Critical:" C_RESET "           %3d                " C_CYAN "│" C_RESET "\n", stats.critical);
-    printf("  " C_CYAN "│" C_RESET "  " C_ORANGE "High:" C_RESET "               %3d                " C_CYAN "│" C_RESET "\n", stats.high);
-    printf("  " C_CYAN "│" C_RESET "  " C_YELLOW "Medium:" C_RESET "             %3d                " C_CYAN "│" C_RESET "\n", stats.medium);
-    printf("  " C_CYAN "│" C_RESET "  " C_GREEN "Low:" C_RESET "                %3d                " C_CYAN "│" C_RESET "\n", stats.low);
-    printf("  " C_CYAN "├────────────────────────────────────────┤" C_RESET "\n");
-    printf("  " C_CYAN "│" C_RESET "  Hidden Processes:  %3d                " C_CYAN "│" C_RESET "\n", stats.hidden_procs);
-    printf("  " C_CYAN "│" C_RESET "  Suspicious Modules:%3d                " C_CYAN "│" C_RESET "\n", stats.suspicious_modules);
-    printf("  " C_CYAN "│" C_RESET "  Suspicious Files:  %3d                " C_CYAN "│" C_RESET "\n", stats.suspicious_files);
-    printf("  " C_CYAN "│" C_RESET "  Network Anomalies: %3d                " C_CYAN "│" C_RESET "\n", stats.network_anomalies);
-    printf("  " C_CYAN "│" C_RESET "  eBPF Threats:      %3d                " C_CYAN "│" C_RESET "\n", stats.ebpf_threats);
-    printf("  " C_CYAN "│" C_RESET "  Integrity Fails:   %3d                " C_CYAN "│" C_RESET "\n", stats.integrity_failures);
-    printf("  " C_CYAN "│" C_RESET "  Persistence Found: %3d                " C_CYAN "│" C_RESET "\n", stats.persistence_found);
-    printf("  " C_CYAN "╰────────────────────────────────────────╯" C_RESET "\n\n");
+   printf("\n");
+printf("  " C_CYAN "╭────────────────────────────────────────╮" C_RESET "\n");
+printf("  " C_CYAN "│" C_WHITE C_BOLD "           SCAN RESULTS                " C_CYAN "│" C_RESET "\n");
+printf("  " C_CYAN "├────────────────────────────────────────┤" C_RESET "\n");
+printf("  " C_CYAN "│" C_RESET "  Scan Duration:     %3ld seconds         " C_CYAN "│" C_RESET "\n", elapsed);
+printf("  " C_CYAN "│" C_RESET "  Checks Performed:  %3d                 " C_CYAN "│" C_RESET "\n", stats.total_checks);
+printf("  " C_CYAN "├────────────────────────────────────────┤" C_RESET "\n");
+printf("  " C_CYAN "│" C_RESET "  " C_RED C_BOLD "Critical:" C_RESET "           %3d                 " C_CYAN "│" C_RESET "\n", stats.critical);
+printf("  " C_CYAN "│" C_RESET "  " C_ORANGE "High:" C_RESET "               %3d                 " C_CYAN "│" C_RESET "\n", stats.high);
+printf("  " C_CYAN "│" C_RESET "  " C_YELLOW "Medium:" C_RESET "             %3d                 " C_CYAN "│" C_RESET "\n", stats.medium);
+printf("  " C_CYAN "│" C_RESET "  " C_GREEN "Low:" C_RESET "                %3d                 " C_CYAN "│" C_RESET "\n", stats.low);
+printf("  " C_CYAN "├────────────────────────────────────────┤" C_RESET "\n");
+printf("  " C_CYAN "│" C_RESET "  Hidden Processes:  %3d                 " C_CYAN "│" C_RESET "\n", stats.hidden_procs);
+printf("  " C_CYAN "│" C_RESET "  Suspicious Modules:%3d                 " C_CYAN "│" C_RESET "\n", stats.suspicious_modules);
+printf("  " C_CYAN "│" C_RESET "  Suspicious Files:  %3d                 " C_CYAN "│" C_RESET "\n", stats.suspicious_files);
+printf("  " C_CYAN "│" C_RESET "  Network Anomalies: %3d                 " C_CYAN "│" C_RESET "\n", stats.network_anomalies);
+printf("  " C_CYAN "│" C_RESET "  eBPF Threats:      %3d                 " C_CYAN "│" C_RESET "\n", stats.ebpf_threats);
+printf("  " C_CYAN "│" C_RESET "  Integrity Fails:   %3d                 " C_CYAN "│" C_RESET "\n", stats.integrity_failures);
+printf("  " C_CYAN "│" C_RESET "  Persistence Found: %3d                 " C_CYAN "│" C_RESET "\n", stats.persistence_found);
+printf("  " C_CYAN "╰────────────────────────────────────────╯" C_RESET "\n\n");
     
     if (stats.critical > 0) {
         printf("  " C_RED C_BOLD "█████ SYSTEM COMPROMISED █████" C_RESET "\n");
